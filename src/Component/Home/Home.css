@@ -1,5 +1,11 @@
-.cards{
-    
-    margin: 5% 7%;
-    
+.row{
+    height: 35rem;
+}
+.HoleCard{
+    margin-left: 9%;
+    padding-top: 9%;
+}
+.background{
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
 }

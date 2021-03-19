@@ -12,7 +12,7 @@ const FakeData = () => {
     "date": "aspering0@unc.edu"
   }, {
     "VehicleId": "Car",
-    "Image": 'https://images.financialexpress.com/2019/11/ashok_leyland-bus.jpeg',
+    "Image": 'https://taxiguru.in/wp-content/themes/taxiv2/img/taxi-img.png',
     "Type": "Car",
     "date": "apaoletti1@woothemes.com"
   }, {

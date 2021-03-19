@@ -9,17 +9,19 @@ const Home = () => {
         setVehicles(FakeData);
     }, [])
     return (
-        <div className="Container">
-            <div className='Row '>
+        <div className="background">
+            <div className="Container">
+                <div className='Row row'>
 
-                <div className='d-flex col-md-4 cards'>
-                    
+                    <div className='d-flex col-md-4  HoleCard'>
+
                         {
                             vehicles.map(vehicle => <HomeCard vehicle={vehicle} key={vehicle.id}></HomeCard>)
                         }
+                    </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     );
 };
