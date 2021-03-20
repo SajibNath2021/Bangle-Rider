@@ -80,6 +80,7 @@ const LogIn = () => {
                     const newUserInfo = { ...user };
                     newUserInfo.error = '';
                     newUserInfo.success = true;
+                    // newUserInfo.displayName = user.name;
                     setUser(newUserInfo);
                     setLoggedInUser(newUserInfo);
                     history.replace(from);
@@ -102,18 +103,19 @@ const LogIn = () => {
                     const newUserInfo = { ...res.user};
                     newUserInfo.error = '';
                     newUserInfo.success = true;
+                    // newUserInfo.displayName = user.name;
                     setUser(newUserInfo);
                     setLoggedInUser(newUserInfo);
                     history.replace(from);
                     
-                    // ...
+                   
                 })
                 .catch((error) => {
                     const newUserInfo = { ...user };
                     newUserInfo.error = error.message;
                     newUserInfo.success = false;
                     setUser(newUserInfo)
-                    // ..
+                   
                 });
         }
 

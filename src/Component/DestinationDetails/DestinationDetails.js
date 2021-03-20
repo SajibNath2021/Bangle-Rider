@@ -1,19 +1,22 @@
 import React from 'react';
 import { useParams } from 'react-router';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUserFriends } from '@fortawesome/free-solid-svg-icons'
 
 const DestinationDetails = (props) => {
     
     const { VehicleId } = useParams();
-    console.log(VehicleId);
     const vehicleData = props.vehicleType;
     const {type , price , site, img}= vehicleData;
-    // const found = vehicleData.find(element => element.type === VehicleId)
-   
+    // const find = vehicleData.find(element => element.type === VehicleId)
+    //  console.log(find);
     
     return (
-        <div>
+        <div >
             
-            <p>$80  {type}</p>
+            <p><img src={img} style={{ width:'25%'}} alt=""/> {type} <FontAwesomeIcon icon={faUserFriends} /> {site}  {price}</p>
+            <p><img src={img} style={{ width:'25%'}} alt=""/> {type} <FontAwesomeIcon icon={faUserFriends} /> {site}  {price}</p>
+            <p><img src={img} style={{ width:'25%'}} alt=""/> {type} <FontAwesomeIcon icon={faUserFriends} /> {site}  {price}</p>
             
         </div>
     );

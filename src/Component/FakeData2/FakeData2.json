@@ -4,18 +4,70 @@
     "type": "Bike",
     "site": "1",
     "price": "$65"
+  },{
+    
+    "img": "https://i.ibb.co/TWzrTBZ/Frame.png",
+    "type": "Bike",
+    "site": "1",
+    "price": "$65"
+  },{
+    
+    "img": "https://i.ibb.co/TWzrTBZ/Frame.png",
+    "type": "Bike",
+    "site": "1",
+    "price": "$65"
   }, {
     
     "img": "https://i.ibb.co/4NN6GBG/Frame-2.png",
     "type": "Car",
     "site": "4",
-    "price": "$80"
+    "price": "$80",
+    "id": 1
+  }, {
+    
+    "img": "https://i.ibb.co/4NN6GBG/Frame-2.png",
+    "type": "Car",
+    "site": "4",
+    "price": "$80",
+    "id": 2
+  }, {
+    
+    "img": "https://i.ibb.co/4NN6GBG/Frame-2.png",
+    "type": "Car",
+    "site": "4",
+    "price": "$80",
+    "id": 3
   }, {
     
     "img": "https://i.ibb.co/6PvxrkC/Frame-1.png",
     "type": "Bus",
     "site": "44",
     "price": "$120"
+  },{
+    
+    "img": "https://i.ibb.co/6PvxrkC/Frame-1.png",
+    "type": "Bus",
+    "site": "44",
+    "price": "$120"
+  },
+  {
+    
+    "img": "https://i.ibb.co/6PvxrkC/Frame-1.png",
+    "type": "Bus",
+    "site": "44",
+    "price": "$120"
+  },{
+    
+    "img": "https://i.ibb.co/H4h8RCs/Group.png",
+    "type": "Train",
+    "site": "200",
+    "price": "$100"
+  },{
+    
+    "img": "https://i.ibb.co/H4h8RCs/Group.png",
+    "type": "Train",
+    "site": "200",
+    "price": "$100"
   },{
     
     "img": "https://i.ibb.co/H4h8RCs/Group.png",
