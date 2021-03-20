@@ -1,9 +1,10 @@
 .row{
-    height: 35rem;
+    height: 40rem;
+   
 }
 .HoleCard{
     margin-left: 9%;
-    padding-top: 9%;
+    padding-top: 15%;
 }
 .background{
     background-image: url("background.jpg");

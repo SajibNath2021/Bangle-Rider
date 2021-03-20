@@ -132,7 +132,7 @@ const LogIn = () => {
             <h2>Login form</h2>
             <br />
             <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" id="" />
-            <label htmlFor="newUser">New user signIn</label>
+            <label htmlFor="newUser">New user SignIn</label>
             <br />
             <form onSubmit={handleSubmit} >
                 {
@@ -145,6 +145,10 @@ const LogIn = () => {
                 <label for="exampleDropdownFormEmail1">Password</label>
                 <input type="password" name="password" className="form-control" onBlur={handleEmailChange} placeholder="Password" required />
                 <br />
+                {
+                    newUser && <input type="password" className="form-control" name="name" onBlur={handleEmailChange} placeholder="Confirm Password " required />
+                }
+                <br/>
                 <input type="submit" value={newUser ? "sign up" : 'sign in'} />
                
             </form>

@@ -43,7 +43,8 @@ const Destination = () => {
                         <input name="to" onBlur={hanleInput} ref={register({ required: true })} placeholder='To' />
                         {errors.exampleRequired && <span className='error'>This field is required</span>}
 
-                        <input onClick={handleSubmitB} type="submit" />
+                        <input onClick={handleSubmitB} type="submit"  value="Search"  />
+                        
                     </form>
                 </div>
                 <div className="col-md-2">

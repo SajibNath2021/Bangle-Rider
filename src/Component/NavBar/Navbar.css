@@ -3,3 +3,10 @@
     padding: 2% 8%;
 
 }
+a.nav-item.nav-link.active {
+    color: white;
+    text-decoration: none;
+}
+a.navbar-brand {
+    color: white;
+}

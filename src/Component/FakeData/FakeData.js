@@ -6,9 +6,9 @@ const FakeData = () => {
   return (
     
       [{
-    "VehicleId":'Byke',
+    "VehicleId":'Bike',
     "Image":'https://media.zigcdn.com/media/model/2020/Mar/yamaha-yzf-r15-v3-right-side-view_360x240.jpg',
-    "Type": "byke",
+    "Type": "Bike",
     "date": "aspering0@unc.edu"
   }, {
     "VehicleId": "Car",
@@ -18,7 +18,7 @@ const FakeData = () => {
   }, {
     "VehicleId": 'Bus',
     "Image": 'https://images.financialexpress.com/2019/11/ashok_leyland-bus.jpeg',
-    "Type": "bus",
+    "Type": "Bus",
     "date": "tpett2@washington.edu"
   }, {
     "VehicleId": 'Train',
