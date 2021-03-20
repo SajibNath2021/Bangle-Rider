@@ -16,7 +16,7 @@ const NavBar = () => {
                     <Link to={`/home`}><a className="nav-item nav-link active ">Home </a></Link>
                     <Link to={`/destination/${VehicleId}`}><a className="nav-item nav-link active" >Destination</a></Link>
                     <Link className="nav-item nav-link active " >Contact</Link>
-                    <Link className="nav-item nav-link active" >{loggedInUser.displayName}</Link>
+                    <Link className="nav-item nav-link active" >User:( {loggedInUser.email} )</Link>
                    <Link to ={`/login`}> <a className="nav-item nav-link active ">LogIn</a></Link>
                    <button onClick={()=>setLoggedInUser({})}>Sign out</button>
                 </div>

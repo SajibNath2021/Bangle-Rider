@@ -19,32 +19,31 @@ import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 export const UserContext = createContext();
 
 function App() {
-   const [loggedInUser, setLoggedInUser] = useState({})
+  const [loggedInUser, setLoggedInUser] = useState({})
   return (
-    <UserContext.Provider value = { [loggedInUser, setLoggedInUser] } >
-    <p>email: {loggedInUser.email}</p>
-    <Router>
-      <NavBar></NavBar>
-      <Switch>
-        <Route path= '/home'>
-        <Home></Home>
-        </Route>
-        <Route exact path = '/'>
-          <Home />
-        </Route>
-        <PrivateRoute path ='/destination/:VehicleId'>
-          <Destination></Destination>
-        </PrivateRoute>
-        <Route path='/login'>
-          <LogIn></LogIn>
-        </Route>
-        <Route path = '*'>
-          <h1>404, error</h1>
-        </Route>
-      </Switch>
-    </Router>
-          
-          
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]} >
+      <Router>
+        <NavBar></NavBar>
+        <Switch>
+          <Route path='/home'>
+            <Home></Home>
+          </Route>
+          <Route exact path='/'>
+            <Home />
+          </Route>
+          <PrivateRoute path='/destination/:VehicleId'>
+            <Destination></Destination>
+          </PrivateRoute>
+          <Route path='/login'>
+            <LogIn></LogIn>
+          </Route>
+          <Route path='*'>
+            <h1>404, error</h1>
+          </Route>
+        </Switch>
+      </Router>
+
+
     </UserContext.Provider>
   );
 }

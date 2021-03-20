@@ -20,17 +20,25 @@ const Destination = () => {
     }, [])
     //  console.log(vehicleType[0].img);
 
-    const [values, setValues] = useState('');
-    const [fullValue, setFullValue] = useState();
+    const [FromValues, setFromValues] = useState('');
+    const [ToValue, setToValue] = useState();
+    const [showDetail, setShowDetail] = useState(false);
 
     const hanleInput = (e) => {
-        let value = e.target.value;
-        console.log(value);
-        setValues(value)
+        if (e.target.name === 'from') {
+            setFromValues(e.target.value);
+        }
+        if (e.target.name === 'to') {
+            setToValue(e.target.value);
+        }
 
     }
 
     const handleSubmitB = (e) => {
+        if (showDetail == false) {
+            setShowDetail(true);
+        }
+
         e.preventDefault();
     }
 
@@ -43,19 +51,20 @@ const Destination = () => {
                         <input name="to" onBlur={hanleInput} ref={register({ required: true })} placeholder='To' />
                         {errors.exampleRequired && <span className='error'>This field is required</span>}
 
-                        <input onClick={handleSubmitB} type="submit"  value="Search"  />
-                        
+                        <input onClick={handleSubmitB} type="submit" value="Search" />
+
                     </form>
                 </div>
                 <div className="col-md-2">
-                    <p>{values}</p>
-                    <p>{values}</p>
+                    {showDetail ? <p>{FromValues} <br />
+                        {ToValue}</p> : ''
+                    }
                     {
-                        vehicleType.map(vehicleType => <DestinationDetails vehicleType={vehicleType} ></DestinationDetails>)
+                       showDetail ? vehicleType.map(vehicleType => <DestinationDetails vehicleType={vehicleType} ></DestinationDetails>) : ''
                     }
                 </div>
                 <div className="col-md-6">
-                    <h1>Map</h1>
+
 
                     <GoogleMap ></GoogleMap>
 
