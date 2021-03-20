@@ -55,10 +55,14 @@ const LogIn = () => {
 
         }
         if (e.target.name === 'password') {
-            isFromValue = /\d{1}/.test(e.target.value);
-
+            let pass = /\d{1}/.test(e.target.value);
+             isFromValue = pass;
 
         }
+        // if(e.target.name === 'confirmPass'){
+        //     let confirmPass = /\d{1}/.test(e.target.value);
+        //       isFromValue = confirmPass;
+        // }
         if (isFromValue) {
             const newUserInfo = { ...user };
             newUserInfo[e.target.name] = e.target.value;
@@ -67,7 +71,7 @@ const LogIn = () => {
     }
 
     const handleSubmit = (e) => {
-
+       
         if (newUser && user.email && user.password) {
             firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
                 .then((userCredential) => {
@@ -77,7 +81,10 @@ const LogIn = () => {
                     newUserInfo.error = '';
                     newUserInfo.success = true;
                     setUser(newUserInfo);
+                    setLoggedInUser(newUserInfo);
+                    history.replace(from);
                     updateUserName(user.name);
+                   
                     // ...
                 })
                 .catch((error) => {
@@ -91,14 +98,14 @@ const LogIn = () => {
         }
         if (user.email && user.password && !newUser) {
             firebase.auth().signInWithEmailAndPassword(user.email, user.password)
-                .then((userCredential) => {
-                    const newUserInfo = { ...user };
+                .then((res) => {
+                    const newUserInfo = { ...res.user};
                     newUserInfo.error = '';
                     newUserInfo.success = true;
                     setUser(newUserInfo);
                     setLoggedInUser(newUserInfo);
                     history.replace(from);
-                    console.log('sign in user info', userCredential.user);
+                    
                     // ...
                 })
                 .catch((error) => {
@@ -145,9 +152,9 @@ const LogIn = () => {
                 <label for="exampleDropdownFormEmail1">Password</label>
                 <input type="password" name="password" className="form-control" onBlur={handleEmailChange} placeholder="Password" required />
                 <br />
-                {
-                    newUser && <input type="password" className="form-control" name="name" onBlur={handleEmailChange} placeholder="Confirm Password " required />
-                }
+                {/* {
+                    newUser && <input type="password" className="form-control" name="confirmPass" onBlur={handleEmailChange} placeholder="Confirm Password " required />
+                } */}
                 <br/>
                 <input type="submit" value={newUser ? "sign up" : 'sign in'} />
                
