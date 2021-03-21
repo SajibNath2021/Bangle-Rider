@@ -26,7 +26,7 @@ export class GoogleMap extends Component {
    
     render() {
       return (
-        <Map style={{width:'40%',marginTop:'1%',height:'80%'}} google={this.props.google}
+        <Map style={{width:'60%',marginTop:'1%',height:'80%'}} google={this.props.google}
             onClick={this.onMapClicked}>
           <Marker onClick={this.onMarkerClick}
                   name={'Current location'} />
