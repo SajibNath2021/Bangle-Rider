@@ -12,11 +12,11 @@ const DestinationDetails = (props) => {
     //  console.log(find);
     
     return (
-        <div >
+        <div style={{background:'gray',borderRadius:'5px',padding:'5px'}}>
             
-            <p><img src={img} style={{ width:'25%'}} alt=""/> {type} <FontAwesomeIcon icon={faUserFriends} /> {site}  {price}</p>
-            <p><img src={img} style={{ width:'25%'}} alt=""/> {type} <FontAwesomeIcon icon={faUserFriends} /> {site}  {price}</p>
-            <p><img src={img} style={{ width:'25%'}} alt=""/> {type} <FontAwesomeIcon icon={faUserFriends} /> {site}  {price}</p>
+            <p style={{background:'tomato',borderRadius:'5px'}}><img src={img} style={{ width:'25%'}} alt=""/> {type} <FontAwesomeIcon icon={faUserFriends} /> {site}  {price}</p>
+            <p  style={{background:'tomato',borderRadius:'5px'}}><img src={img} style={{ width:'25%'}} alt=""/> {type} <FontAwesomeIcon icon={faUserFriends} /> {site}  {price}</p>
+            <p  style={{background:'tomato',borderRadius:'5px'}}><img src={img} style={{ width:'25%'}} alt=""/> {type} <FontAwesomeIcon icon={faUserFriends} /> {site}  {price}</p>
             
         </div>
     );

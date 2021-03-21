@@ -1,12 +1,17 @@
-.row{
-    height: 35rem;
+ .row{
+    height: 90Vh;
    
 }
-.HoleCard{
-    margin-left: 9%;
-    padding-top: 10%;
-}
+@media only screen and (max-width: 600px) {
+    .background{
+        height: 100%;
+        
+    }
+  }
+
 .background{
     background-image: url("background.jpg");
     background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
 }

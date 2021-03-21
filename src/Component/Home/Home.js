@@ -10,19 +10,17 @@ const Home = () => {
     }, [])
     return (
         <div className="background">
-            <div className="Container">
-                <div className='Row row'>
-
-                    <div className='d-flex col-md-4  HoleCard'>
+            <div className="container">
+                <div className=' row'  >
 
                         {
                             vehicles.map(vehicle => <HomeCard vehicle={vehicle} key={vehicle.id}></HomeCard>)
                         }
-                    </div>
+                    
                 </div>
 
             </div>
-        </div>
+         </div>
     );
 };
 

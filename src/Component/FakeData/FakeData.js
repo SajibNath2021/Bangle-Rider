@@ -7,22 +7,22 @@ const FakeData = () => {
     
       [{
     "VehicleId":'Bike',
-    "Image":'https://media.zigcdn.com/media/model/2020/Mar/yamaha-yzf-r15-v3-right-side-view_360x240.jpg',
+    "Image":'https://i.ibb.co/TWzrTBZ/Frame.png',
     "Type": "Bike",
     "date": "aspering0@unc.edu"
   }, {
     "VehicleId": "Car",
-    "Image": 'https://taxiguru.in/wp-content/themes/taxiv2/img/taxi-img.png',
+    "Image": 'https://i.ibb.co/4NN6GBG/Frame-2.png',
     "Type": "Car",
     "date": "apaoletti1@woothemes.com"
   }, {
     "VehicleId": 'Bus',
-    "Image": 'https://images.financialexpress.com/2019/11/ashok_leyland-bus.jpeg',
+    "Image": 'https://i.ibb.co/6PvxrkC/Frame-1.png',
     "Type": "Bus",
     "date": "tpett2@washington.edu"
   }, {
     "VehicleId": 'Train',
-    "Image": 'https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2020/07/vande-bharat-train-rep-1-1594457119.jpg',
+    "Image": 'https://i.ibb.co/H4h8RCs/Group.png',
     "Type": "Train",
     "date": "moharney3@un.org"
   }]

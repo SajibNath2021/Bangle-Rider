@@ -10,3 +10,9 @@ a.nav-item.nav-link.active {
 a.navbar-brand {
     color: white;
 }
+.marginNav{
+    margin-left: 40%;
+}
+.nameMargin{
+    padding-left: 10%;
+}

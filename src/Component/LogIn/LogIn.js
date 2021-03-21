@@ -4,7 +4,9 @@ import "firebase/auth";
 import firebaseConfig from '../Config/Config';
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router';
-import './Login.css'
+import './Login.css';
+import { FaGoogle } from 'react-icons/fa';
+
 
 const LogIn = () => {
     if (firebase.apps.length === 0) {
@@ -76,15 +78,15 @@ const LogIn = () => {
             firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
                 .then((userCredential) => {
                     // Signed in 
-                    var user = userCredential.user;
-                    const newUserInfo = { ...user };
+                    var newUser = userCredential.user;
+                    const newUserInfo = { ...newUser };
                     newUserInfo.error = '';
                     newUserInfo.success = true;
-                    // newUserInfo.displayName = user.name;
+                    newUserInfo.displayName = user.name;
                     setUser(newUserInfo);
                     setLoggedInUser(newUserInfo);
-                    history.replace(from);
                     updateUserName(user.name);
+                    history.replace(from);
                    
                     // ...
                 })
@@ -103,7 +105,6 @@ const LogIn = () => {
                     const newUserInfo = { ...res.user};
                     newUserInfo.error = '';
                     newUserInfo.success = true;
-                    // newUserInfo.displayName = user.name;
                     setUser(newUserInfo);
                     setLoggedInUser(newUserInfo);
                     history.replace(from);
@@ -141,7 +142,7 @@ const LogIn = () => {
             <h2>Login form</h2>
             <br />
             <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" id="" />
-            <label htmlFor="newUser">New user SignIn</label>
+            <label htmlFor="newUser">For New user (SignUp)</label>
             <br />
             <form onSubmit={handleSubmit} >
                 {
@@ -154,11 +155,11 @@ const LogIn = () => {
                 <label for="exampleDropdownFormEmail1">Password</label>
                 <input type="password" name="password" className="form-control" onBlur={handleEmailChange} placeholder="Password" required />
                 <br />
-                {/* {
+                {
                     newUser && <input type="password" className="form-control" name="confirmPass" onBlur={handleEmailChange} placeholder="Confirm Password " required />
-                } */}
+                }
                 <br/>
-                <input type="submit" value={newUser ? "sign up" : 'sign in'} />
+                <input type="submit" value={newUser ? "Sign up" : 'Sign in'} />
                
             </form>
             <br />
@@ -166,7 +167,7 @@ const LogIn = () => {
                 user.success ? <p style={{ color: 'green' }}>user  {newUser ? 'crated' : 'LoggedIn'} successfully</p> : <p style={{ color: 'red' }}>{user.error}</p>
             }
             
-            <button onClick={handleGoogleButton}>Login with Google</button>
+            <button onClick={handleGoogleButton}> <FaGoogle />  Login with Google</button>
 
       
       

@@ -26,6 +26,7 @@ const Destination = () => {
     const [FromValues, setFromValues] = useState('');
     const [ToValue, setToValue] = useState();
     const [showDetail, setShowDetail] = useState(false);
+    const [toggle, setToggle] = useState(false);
 
     const hanleInput = (e) => {
         if (e.target.name === 'from') {
@@ -52,8 +53,8 @@ const Destination = () => {
     return (
         <div className="container">
             <div className="row">
-                <div className="col-md-4 px-4 py-3">
-                    <form className='ship-form' onSubmit={handleSubmit(onSubmit)}>
+                <div className="col-md-4 px-4 py-3 " style={{background:'tomato',height:"60Vh"}}>
+                    < form className='ship-form' onSubmit={handleSubmit(onSubmit)}>
                         <h3>Search Your Destination</h3>
                         <input name="from" onBlur={hanleInput} ref={register} placeholder='From' />
                         <input name="to" onBlur={hanleInput} ref={register({ required: true })} placeholder='To' />
@@ -68,10 +69,11 @@ const Destination = () => {
 
                     </form>
                 </div>
-                <div className="col-md-3  py-3">
+                <div className="col-md-3  py-3"  >
+                    <div style={{background:'tomato',borderRadius:'5px',textAlign:'center',color:'white'}}>
                     {showDetail ? <p>{FromValues} <br />
                         {ToValue} </p> : ''
-                    }
+                    }</div>
                     {
                         showDetail ?  <DestinationDetails vehicleType={find} ></DestinationDetails> : ''
                     }

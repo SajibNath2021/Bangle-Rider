@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Map,  Marker, GoogleApiWrapper } from 'google-maps-react';
+import { faAlignRight } from '@fortawesome/free-solid-svg-icons';
 export class GoogleMap extends Component {
     state = {
       showingInfoWindow: false,
@@ -25,7 +26,7 @@ export class GoogleMap extends Component {
    
     render() {
       return (
-        <Map style={{width:'40%', marginTop:'1%',height:'80%'}} google={this.props.google}
+        <Map style={{width:'40%',marginTop:'1%',height:'80%'}} google={this.props.google}
             onClick={this.onMapClicked}>
           <Marker onClick={this.onMarkerClick}
                   name={'Current location'} />
